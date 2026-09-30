@@ -26,14 +26,11 @@ mybatis-plus:
     # 仅在开发环境开启日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-# OpenAPI / Swagger UI
+# SpringDoc OpenAPI配置
 springdoc:
   api-docs:
-    enabled: true
-    path: /v3/api-docs
+    path: /v3/api-docs  # OpenAPI JSON文档路径,默认就是/v3/api-docs
+    enabled: true  # 启用API文档生成
   swagger-ui:
-    enabled: true
-    path: /swagger-ui.html
-  group-configs:
-    - group: default
-      paths-to-match: /**
+    path: /swagger-ui.html  # Swagger UI访问路径,默认是/swagger-ui.html
+    enabled: true  # 启用Swagger UI
